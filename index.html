@@ -8,28 +8,36 @@
   <link href="https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
+  <script async src="scripts/script.js"></script>
   <title>Plants</title>
 </head>
-<body>
-  <header>
-    <nav>
-      <a href="#"><img src="assets/logo.svg" alt="Plants logo"><span>Plants</span></a>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#service">Service</a></li>
-        <li><a href="#price">Price</a></li>
-        <li><a href="#contacts">Contacts</a></li>
-      </ul>
-    </nav>
+
+<body class="container">
+
+  <header class="header bg-color">
+    <div class="section-container header__container">
+      <a class="logo" href="#"><img class="logo__img" src="assets/logo.svg" alt="Plants logo"><span class="logo__text">Plants</span></a>
+      <nav class="nav">
+        <ul class="nav__ul">
+          <li class="nav__item nav__item--hovered"><a class="nav__a" href="#home">Home</a></li>
+          <li class="nav__item"><a class="nav__a" href="#about">About us</a></li>
+          <li class="nav__item"><a class="nav__a" href="#service">Service</a></li>
+          <li class="nav__item"><a class="nav__a" href="#price">Price</a></li>
+          <li class="nav__item"><a class="nav__a" href="#contacts">Contacts</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
-  <main>
-    <section class="welcome">
-      <img src="assets/leafs.png" alt="leafs">
-      <div>
-        <h1>We grow <span>plants</span> and give you oxygen</h1>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-        <a href="#">Learn more</a>
+
+  <main class="main">
+    <section class="welcome bg-color">
+      <div class="section-container welcome__container">
+        <img class="welcome__img" src="assets/leafs.png" alt="leafs">
+        <div class="welcome__content">
+          <h1 class="welcome__header">We grow <span class="welcome__header--select">plants</span> and give you oxygen</h1>
+          <p class="welcome__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+          <a class="welcome__link" href="#">Learn more</a>
+        </div>
       </div>
     </section>
 
@@ -50,19 +58,26 @@
     <section class="contacts" id="contacts">
       <h2>Contact us</h2>
     </section>
+
   </main>
-  <footer>
+
+  <footer class="footer">
+
     <div>
       <span>©</span><span>2022</span>
       <a href="#">github</a>
     </div>
+
     <a href="#">Rolling Scopes School</a>
+
     <ul>
       <li><a href="#">instagram</a></li>
       <li><a href="#">facebook</a></li>
       <li><a href="#">twitter</a></li>
       <li><a href="#">pinterest</a></li>
     </ul>
+
   </footer>
+
 </body>
 </html>

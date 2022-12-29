@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #717171;
+  font-family: 'Inter', sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-container {
+  padding-left: 109px;
+  padding-right: 109px;
+  margin: 0 auto;
+  max-width: 1440px;
+}
+
+.bg-color {
+  background-color: #EDF2EC;
+}
+
+.header {
+  padding: 42px 0;
+  width: 100%;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+}
+
+.nav__ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.nav__item {
+  line-height: 50px;
+}
+
+.nav__item  + .nav__item {
+  margin-left: 46px;
+}
+
+.nav__item--hovered .nav__a{
+  color: #E06733;
+  font-weight: 700;
+}
+
+.nav__a {
+  font-size: 16px;
+  line-height: 50px;
+  font-family: 'Inika', serif;
+  font-weight: 400;
+  color: #010201;
+  text-decoration: none;
+}
+
+.logo {
+  display: flex;
+  align-items: flex-end;
+
+  font-family: 'Inika', serif;
+  font-size: 16px;
+  line-height: 21px;
+  color: #000000;
+  text-decoration: none;
+
+  padding-bottom: 6px;
+  padding-left: 2px;
+}
+
+.logo__img {
+  width: 20px;
+  height: 20px;
+  margin-right: 1px;
+
+}
+
+.logo__text {
+  margin-right: 13px;
+  line-height: 1;
+}
+
+.welcome {
+  padding: 62px 0 62.4px;
+}
+
+.welcome__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.welcome__img {
+  width: 448.8px;
+  height: 407.36px;
+  margin: 0;
+  margin-right: 224.2px;
+}
+
+.welcome__content {
+  max-width: 549px;
+  padding-top: 36px;
+}
+
+.welcome__header {
+  margin: 0;
+  margin-bottom: 42px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 111%;
+}
+
+.welcome__header--select {
+  color: #499A18;
+}
+
+.welcome__text {
+  margin: 0;
+  font-size: 20px;
+  line-height: 175%;
+  margin-bottom: 60px;
+}
+
+.welcome__link {
+  padding: 10px 26px;
+  border: 2px solid #E06733;
+  border-radius: 10px;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+  text-decoration: none;
+}
