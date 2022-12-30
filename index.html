@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <script async src="scripts/script.js"></script>
@@ -15,6 +16,7 @@
 <body class="container">
 
   <header class="section header bg-color">
+
     <div class="section-container header__container">
       <a class="logo" href="#"><img class="logo__img" src="assets/logo.svg" alt="Plants logo"><span class="logo__text">Plants</span></a>
       <nav class="nav">
@@ -37,43 +39,119 @@
         </ul>
       </nav>
     </div>
+
   </header>
 
   <main class="main">
     <section class="section welcome bg-color">
+
       <div class="section-container welcome__container">
+
         <img class="welcome__img" src="assets/leafs.png" alt="leafs">
         <div class="welcome__content">
           <h1 class="welcome__header">We grow <span class="welcome__header--select">plants</span> and give you oxygen</h1>
           <p class="welcome__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-          <a class="welcome__link" href="#">Learn more</a>
+          <button class="welcome__link">Learn more</button>
+
         </div>
       </div>
+
     </section>
 
     <section class="section about" id="about">
+
       <div class="section-container about__container">
+
         <div class="about__content">
           <h2 class="about__header">We are <span class="about__header--select">professional experienced</span> gardeners</h2>
           <p class="about__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
         </div>
-        <img class="about__img" src="assets/houseplant 1.jpg" alt="Houseplant">
+        <img class="about__img" src="assets/houseplant.jpg" alt="Houseplant">
+
+      </div>
+
+    </section>
+
+    <section class="section service bg-color" id="service">
+      <div class="section-container service__container">
+        <h2 class="service__header">Service and our projects</h2>
+        <div class="service-controls">
+          <button class="button service-controls__item">Gardens</button>
+          <button class="button service-controls__item">Lawn</button>
+          <button class="button service-controls__item">Planting</button>
+        </div>
+        <ul class="service-content">
+          <li class="service-content__item">
+            <figure class="card">
+              <img class="card__img" src="assets/services/1.jpg" alt="woman tending the garden">
+              <figcaption class="card__desc">
+                <p class="card__desc__header">Garden care</p>
+                <p class="card__desc__text">Lorem Ipsum has been the industry</p>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="service-content__item">
+            <figure class="card">
+              <img class="card__img" src="assets/services/2.jpg" alt="woman tending the garden">
+              <figcaption class="card__desc">
+                <p class="card__desc__header">Planting</p>
+                <p class="card__desc__text">Lorem Ipsum has been the industry</p>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="service-content__item">
+            <figure class="card">
+              <img class="card__img" src="assets/services/3.jpg" alt="woman tending the garden">
+              <figcaption class="card__desc">
+                <p class="card__desc__header">Lawn care</p>
+                <p class="card__desc__text">Lorem Ipsum has been the industry</p>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="service-content__item">
+            <figure class="card">
+              <img class="card__img" src="assets/services/4.jpg" alt="woman tending the garden">
+              <figcaption class="card__desc">
+                <p class="card__desc__header">Planting</p>
+                <p class="card__desc__text">Lorem Ipsum has been the industry</p>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="service-content__item">
+            <figure class="card">
+              <img class="card__img" src="assets/services/5.jpg" alt="woman tending the garden">
+              <figcaption class="card__desc">
+                <p class="card__desc__header">Garden care</p>
+                <p class="card__desc__text">Lorem Ipsum has been the industry</p>
+              </figcaption>
+            </figure>
+          </li>
+          <li class="service-content__item">
+            <figure class="card">
+              <img class="card__img" src="assets/services/6.jpg" alt="woman tending the garden">
+              <figcaption class="card__desc">
+                <p class="card__desc__header">Planting</p>
+                <p class="card__desc__text">Lorem Ipsum has been the industry</p>
+              </figcaption>
+            </figure>
+          </li>
+        </ul>
       </div>
     </section>
 
-    <section class="service bg-color" id="service">
-      <h2>Service and our projects</h2>
-    </section>
-
-    <section class="price" id="price">
-      <h2>Prices</h2>
+    <section class="section price" id="price">
+      <div class="section-container">
+        <h2>Prices</h2>
+      </div>
     </section>
 
     <section class="section contacts bg-color" id="contacts">
+
       <div class="section-container contacts__container">
+
         <h2 class="contacts__header">Contact us</h2>
-        <img class="contacts__img" src="assets/contact_woman 1.png" alt="woman">
-        <form  class="contacts-form" action="">
+        <img class="contacts__img" src="assets/contact_woman.png" alt="woman">
+        <form  class="contacts-form">
           <label class="contacts-form__label" for="city">City</label>
           <select class="contacts-form__select" name="city" id="city">
             <option value="Kyiv">Kyiv</option>
@@ -82,12 +160,15 @@
             <option value="Amsterdam">Amsterdam</option>
           </select>
         </form>
+
       </div>
+
     </section>
 
   </main>
 
   <footer class="section footer">
+
     <div class="section-container footer__container">
 
       <div class="creator">
@@ -120,6 +201,7 @@
           </a>
         </li>
       </ul>
+
     </div>
 
   </footer>

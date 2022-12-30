@@ -28,6 +28,24 @@ body {
   background-color: #EDF2EC;
 }
 
+.button {
+  padding: 11px 40px;
+
+  min-width: 161px;
+
+  border: 1px solid #E06733;
+  border-radius: 5px;
+
+  font-family: 'Inika', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  color: #E06733;
+
+  background: transparent;
+}
+
 .header {
   padding: 42px 0;
 }
@@ -118,7 +136,7 @@ body {
   width: 448.8px;
   height: 407.36px;
   margin: 0;
-  margin-right: 224.2px;
+  /* margin-right: 224.2px; */
 }
 
 .welcome__content {
@@ -143,7 +161,7 @@ body {
   margin: 0;
   font-size: 20px;
   line-height: 175%;
-  margin-bottom: 60px;
+  margin-bottom: 48px;
 }
 
 .welcome__link {
@@ -155,6 +173,7 @@ body {
   line-height: 20px;
   color: #000000;
   text-decoration: none;
+  background: transparent;
 }
 
 /* about */
@@ -252,6 +271,93 @@ body {
   background: #D6E7D2;
   border-radius: 0;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* service */
+.service {
+  padding: 40px 0 66px;
+}
+
+.service__container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.service__header {
+  margin: 0;
+  margin-right: 142px;
+  max-width: 306px;
+  font-family: 'Inika', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 52px;
+
+  color: #499A18;
+}
+
+.service-controls {
+  /* margin-top: 28px; */
+}
+
+.service-controls__item {
+
+}
+
+.service-controls__item + .service-controls__item {
+  margin-left: 33px;
+}
+
+.service-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  margin-top: 79px;
+  padding: 0;
+  list-style-type: none;
+}
+
+.service-content__item {
+  margin-bottom: 55px;
+}
+
+.card {
+  display: inline-block;
+  margin: 0;
+  max-width: 329px;
+}
+
+.card__img {
+  display: block;
+  width: 329px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 20px 20px 0px 0px;
+  filter: contrast(80%) saturate(120%);
+}
+
+.card__desc {
+  padding: 9px 30px 36px;
+  text-align: center;
+  border: 1px solid #E3E1D5;
+  border-radius: 0px 0px 20px 20px;
+}
+
+.card__desc__header {
+  margin: 0;
+  margin-bottom: 15px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  color: #E06733;
+}
+
+.card__desc__text {
+  margin: 0;
 }
 
 /* footer */
