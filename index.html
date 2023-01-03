@@ -17,8 +17,11 @@
 
   <header class="section header bg-color">
 
-    <div class="section-container header__container">
-      <a class="logo" href="#"><img class="logo__img" src="assets/logo.svg" alt="Plants logo"><span class="logo__text">Plants</span></a>
+    <div class="section__container header__container">
+      <a class="logo" href="#">
+        <img class="logo__img" src="assets/logo.svg" alt="Plants logo">
+        <span class="logo__text">Plants</span>
+      </a>
       <nav class="nav">
         <ul class="nav__ul">
           <li class="nav__item nav__item--hovered">
@@ -45,13 +48,13 @@
   <main class="main">
     <section class="section welcome bg-color">
 
-      <div class="section-container welcome__container">
+      <div class="section__container welcome__container">
 
         <img class="welcome__img" src="assets/leafs.png" alt="leafs">
         <div class="welcome__content">
           <h1 class="welcome__header">We grow <span class="welcome__header--select">plants</span> and give you oxygen</h1>
           <p class="welcome__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-          <button class="welcome__link">Learn more</button>
+          <a class="welcome__link" href="#about">Learn more</a>
 
         </div>
       </div>
@@ -60,7 +63,7 @@
 
     <section class="section about" id="about">
 
-      <div class="section-container about__container">
+      <div class="section__container about__container">
 
         <div class="about__content">
           <h2 class="about__header">We are <span class="about__header--select">professional experienced</span> gardeners</h2>
@@ -73,7 +76,7 @@
     </section>
 
     <section class="section service bg-color" id="service">
-      <div class="section-container service__container">
+      <div class="section__container service__container">
         <h2 class="service__header">Service and our projects</h2>
         <div class="service-controls">
           <button class="button service-controls__item">Gardens</button>
@@ -140,14 +143,52 @@
     </section>
 
     <section class="section price" id="price">
-      <div class="section-container">
-        <h2>Prices</h2>
+      <div class="section__container price__container">
+        <div class="price__column">
+          <h2 class="price__header">Prices</h2>
+          <div class="accordion">
+            <details class="accordion__item">
+              <summary class="accordion__titel">Basics</summary>
+              <div class="accordion__body">
+                <p class="accordion__text">
+                  Release of Letraset sheets containing Lorem Ipsum passages, and more recently
+                </p>
+                <p class="accordion__price"><span class="accordion__selected">$15</span> / per hour</p>
+                <button class="accrodion__button">Order</button>
+              </div>
+            </details>
+            <details class="accordion__item">
+              <summary class="accordion__titel">Standard</summary>
+              <div class="accordion__body">
+                <p class="accordion__text">
+                  Release of Letraset sheets containing Lorem Ipsum passages, and more recently
+                </p>
+                <p class="accordion__price"><span class="accordion__selected">$25</span> / per hour</p>
+                <button class="accrodion__button">Order</button>
+              </div>
+            </details>
+            <details class="accordion__item">
+              <summary class="accordion__titel">Pro care</summary>
+              <div class="accordion__body">
+                <p class="accordion__text">
+                  Release of Letraset sheets containing Lorem Ipsum passages, and more recently
+                </p>
+                <p class="accordion__price"><span class="accordion__selected">$35</span> / per hour</p>
+                <button class="accrodion__button">Order</button>
+              </div>
+            </details>
+          </div>
+        </div>
+        <div class="price__column price__column--right">
+          <p class="price__text">Our best <span class="price__selected">gardeners</span> are ready to help you</p>
+          <a class="price__button" href="#contacts">Contact us</a>
+        </div>
       </div>
     </section>
 
     <section class="section contacts bg-color" id="contacts">
 
-      <div class="section-container contacts__container">
+      <div class="section__container contacts__container">
 
         <h2 class="contacts__header">Contact us</h2>
         <img class="contacts__img" src="assets/contact_woman.png" alt="woman">
@@ -169,7 +210,7 @@
 
   <footer class="section footer">
 
-    <div class="section-container footer__container">
+    <div class="section__container footer__container">
 
       <div class="creator">
         <span class="creator__item creator__trademark">©</span>
