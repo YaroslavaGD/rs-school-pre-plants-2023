@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: #717171;
   font-family: 'Inter', sans-serif;
@@ -140,15 +144,17 @@ body {
 
 .welcome__container {
   display: flex;
-  justify-content: space-between;
+  justify-content: right;
   align-items: flex-start;
+  background: left 100px top -10px no-repeat;
+  background-image: url('../assets/leafs.png');
 }
 
-.welcome__img {
+/* .welcome__img {
   width: 448.8px;
   height: 407.36px;
   margin: 0;
-}
+} */
 
 .welcome__content {
   max-width: 549px;
@@ -172,10 +178,12 @@ body {
   margin: 0;
   font-size: 20px;
   line-height: 175%;
-  margin-bottom: 59px;
+  margin-bottom: 47px;
 }
 
 .welcome__link {
+  display: inline-block;
+  margin-bottom: 33px;
   padding: 10px 26px;
   border: 2px solid #E06733;
   border-radius: 10px;
@@ -534,18 +542,19 @@ body {
 /* contacts */
 .contacts__container {
   position: relative;
+  min-height: 550px;
   display: flex;
-  justify-content: space-between;
-  padding-top: 53px;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+  background: left 109px bottom 0% no-repeat;
+  background-image: url('../assets/contact_woman.png');
 }
 
 .contacts__header {
-  /* position: absolute;
-  top: 60px;
-  left: 50%; */
-  flex-grow: 1;
   margin: 0;
-  /* transform: translateX(-51%); */
+  margin-bottom: 34px;
+  padding-right: 6px;
   font-family: 'Inika', serif;
   font-style: normal;
   font-weight: 700;
@@ -554,16 +563,11 @@ body {
   color: #499A18;
 }
 
-.contacts__img {
-  order: -1;
-}
-
 .contacts-form {
   display: flex;
   flex-direction: column;
+  align-self: end;
   min-width: 450px;
-
-  margin-top: 94px;
 }
 
 .contacts-form__select {
@@ -571,6 +575,7 @@ body {
 }
 
 .contacts-form__label {
+  position: relative;
   padding: 5px 20px;
 
   font-family: 'Inter', sans-serif;
@@ -583,8 +588,36 @@ body {
 
   color: #717171;
   background: #D6E7D2;
+  
+  border: 1px solid transparent;
   border-radius: 0;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  cursor: pointer;
+}
+
+.contacts-form__label::after {
+  content: '';
+  position: absolute;
+  display: block;
+  top: 52%;
+  left: calc(100% - 50px);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: left 50% top 50% no-repeat #AEA1A1;
+  background-image: url('../assets/arrow-down_white.svg');
+  transform: translateY(-50%);
+}
+
+.contacts-form__label:hover {
+  background: #C1E698;
+  border: 1px solid #D6E7D2;
+  border-radius: 0px;
+  box-shadow: none;
+}
+.contacts-form__label:hover::after {
+  background-color: #8BA07E;
 }
 
 /* footer */
