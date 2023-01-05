@@ -17,6 +17,12 @@ body {
   align-items: center;
 }
 
+.bg-color {
+  background-color: #EDF2EC;
+}
+
+/*============= section =============*/
+
 .section {
   width: 100%;
 }
@@ -28,9 +34,7 @@ body {
   max-width: 1440px;
 }
 
-.bg-color {
-  background-color: #EDF2EC;
-}
+/*============= button =============*/
 
 .button {
   padding: 11px 40px;
@@ -57,6 +61,8 @@ body {
   color: #FFFFFF;
 }
 
+/*============= header =============*/
+
 .header {
   padding: 42px 0;
 }
@@ -66,6 +72,8 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+
+/*============= nav =============*/
 
 .nav {
   display: flex;
@@ -100,6 +108,8 @@ body {
   color: #010201;
   text-decoration: none;
 }
+
+/*============= logo =============*/
 
 .logo {
   display: flex;
@@ -136,7 +146,7 @@ body {
   width: 100%;
 }
 
-/* welcome */
+/*============= welcome =============*/
 
 .welcome {
   padding: 62px 0 61.4px;
@@ -149,12 +159,6 @@ body {
   background: left 100px top -10px no-repeat;
   background-image: url('../assets/leafs.png');
 }
-
-/* .welcome__img {
-  width: 448.8px;
-  height: 407.36px;
-  margin: 0;
-} */
 
 .welcome__content {
   max-width: 549px;
@@ -201,7 +205,8 @@ body {
   background-color: #E06733;
 }
 
-/* about */
+/*============= about =============*/
+
 .about {
   padding: 93px 0 94px;
 }
@@ -243,7 +248,8 @@ body {
   color: #636060;
 }
 
-/* service */
+/*============= service =============*/
+
 .service {
   padding: 40px 0 66px;
 }
@@ -294,6 +300,8 @@ body {
   margin-bottom: 55px;
 }
 
+/*============= card =============*/
+
 .card {
   display: inline-block;
   margin: 0;
@@ -331,7 +339,8 @@ body {
   margin: 0;
 }
 
-/* price */
+/*============= price =============*/
+
 .price {
   padding: 38px 0 127px;
   color: #000000;
@@ -399,6 +408,8 @@ body {
   color: #ffffff;
   background: #E06733;
 }
+
+/*============= accordion =============*/
 
 .accordion {
   padding: 34px 41px;
@@ -539,7 +550,8 @@ body {
   color: #ffffff;
 }
 
-/* contacts */
+/*============= contacts =============*/
+
 .contacts__container {
   position: relative;
   min-height: 550px;
@@ -620,7 +632,8 @@ body {
   background-color: #8BA07E;
 }
 
-/* footer */
+/*============= footer =============*/
+
 .footer {
   padding: 40px 0;
 
@@ -687,6 +700,7 @@ body {
 .social__link {
   color: #000000;
   text-decoration: none;
+  transition: 0.3s all;
 }
 
 .social__img {
@@ -694,4 +708,11 @@ body {
   height: 32px;
 }
 
-.social__img {}
+.social__path {
+  fill: #000000;
+  transition: 0.3s all;
+}
+
+.social__link:hover .social__path {
+  fill: #E06733;
+}
