@@ -161,7 +161,7 @@ body {
   justify-content: right;
   align-items: flex-start;
   background: left 100px top -10px no-repeat;
-  background-image: url('../assets/leafs.png');
+  background-image: url('../assets/leafs-min.png');
 }
 
 .welcome__content {
@@ -357,7 +357,7 @@ body {
 .price__column--right {
   text-align: right;    
   background: right -9px top 224px no-repeat #ffffff;
-  background-image: url('../assets/leafs2.jpg');
+  background-image: url('../assets/leafs2-min.jpg');
 }
 
 .price__container {
@@ -573,7 +573,7 @@ body {
   align-items: center;
   padding-top: 60px;
   background: left 109px bottom 0% no-repeat;
-  background-image: url('../assets/contact_woman.png');
+  background-image: url('../assets/contact_woman-min.png');
 }
 
 .contacts__header {
