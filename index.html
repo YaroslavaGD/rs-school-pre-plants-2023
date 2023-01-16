@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="page" lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,14 +15,21 @@
 <body class="container">
 
   <header class="section header bg-color">
-
     <div class="section__container header__container">
       <a class="logo" href="#">
         <img class="logo__img" src="assets/logo.svg" alt="Plants logo">
         <span class="logo__text">Plants</span>
       </a>
+      <button class="header__button action" type="button" aria-expanded="false" aria-controls="menu" aria-label="Toggle menu">
+        <svg class="header__icon-menu action__icon" width="40" height="24" aria-hidden="true">
+          <use href="assets/icons.svg#menu"></use>
+        </svg>
 
-      <nav class="nav">
+        <svg class="header__icon-close action__icon--close" width="40" height="40" aria-hidden="true">
+          <use href="assets/icons.svg#close"></use>
+        </svg>
+      </button>
+      <nav id="nav" class="nav" aria-label="Primary">
         <ul class="nav__ul">
           <li class="nav__item nav__item--hovered">
             <a class="nav__a" href="#home">Home</a>
