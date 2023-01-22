@@ -1019,12 +1019,22 @@ body {
 
   .nav {
     position: fixed;
-    inset: 0;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 50%;
+    min-height: 400px;
+    min-width: 160px;
     z-index: 1;
     padding: 20px;
-    background-color: #ffffff;
-    transform: translateX(100%) scaleX(.3);
-    transition: transform .4s cubic-bezier(.65,0,.35,1);
+    color: #717171;
+    background: #D6E7D2;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    transform: translateX(100%);
+    opacity: 0;
+    transition: all .4s cubic-bezier(.65,0,.35,1);
   }
 
   .nav__ul {
@@ -1039,21 +1049,10 @@ body {
   }
 
   .nav--open {
-    transform: translateX(0) scaleX(1);
+    /* display: block; */
+    opacity: 1;
+    transform: translateX(0);
   }
-
-  /* .nav__ul {
-    top: 0;
-    right: 0;
-    position: absolute;
-    transform: translateY(-100%);
-    width: 50%;
-    height: 35%;
-    background: #fff;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-  } */
 
   .nav__item + .nav__item {
     margin-left: 0;

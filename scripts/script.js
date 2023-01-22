@@ -1,16 +1,59 @@
 (function () {
-  console.log('Yaroslava Hryzadubova. Plants. Part1\n------------------------------------------\nScore 100/100\n');
+  console.log('Yaroslava Hryzadubova. Plants. Part2\n------------------------------------------\nScore 75/75\n');
   console.log('Оценка по пунктам:\n------------------------------------------\n');
-  console.log('1. Вёрстка валидная (нет ошибок и предупреждений) +10\n');
-  console.log('2. Вёрстка семантическая +20 \nВ коде странице присутствуют следующие элементы:\n');
-  console.log('- <header>, <main>, <footer> +3\n- пять элементов <section> (по количеству секций) +3\n- только один заголовок <h1> +3\n- четыре заголовка <h2> +3\n- один элемент <nav> (панель навигации) +3\n- два списка ul > li > a (панель навигации, ссылки на соцсети) +3\n- пять кнопок <button> (на странице их 6) +2\n');
-  console.log('3. Вёрстка соответствует макету +48\n');
-  console.log('- блок <header> +6\n- секция welcome +7\n- секция about +7\n- секция service +7\n- секция prices +7\n- секция contacts +7\n- блок <footer> +7\n');
-  console.log('4. Требования к css + 12\n');
-  console.log('- для построения сетки используются флексы +2\n- при уменьшении масштаба страницы браузера вёрстка размещается по центру, а не сдвигается в сторону +2\n- фоновый цвет тянется на всю ширину страницы +2\n- иконки добавлены в формате .svg +2\n- изображения добавлены в формате .jpg или .png +2\n- есть favicon +2\n');
-  console.log('5. Интерактивность, реализуемая через css +20\n');
-  console.log('- плавная прокрутка по якорям +5\n');
-  console.log('- cсылки в футере при нажатии на них ведут на гитхаб автора проекта и на страницу курса https://rs.school/js-stage0/ +5\n');
-  console.log('- интерактивность включает в себя не только изменение внешнего вида курсора, например, при помощи свойства cursor: pointer, но и другие визуальные эффекты, например, изменение цвета фона или цвета шрифта. Если в макете указаны стили при наведении и клике, для элемента указываем эти стили. Если в макете стили не указаны, реализуете их по своему усмотрению, руководствуясь общим стилем макета +5\n');
-  console.log('- обязательное требование к интерактивности: плавное изменение внешнего вида элемента при наведении и клике не влияющее на соседние элементы +5\n');
+  console.log('1. Вёрстка соответствует макету. Ширина экрана 768px +24\n');
+  console.log('2. Вёрстка соответствует макету. Ширина экрана 380px +24\n');
+  console.log('3. Ни на одном из разрешений до 320px включительно не появляется горизонтальная полоса прокрутки. Весь контент страницы при этом сохраняется: не обрезается и не удаляется +15\n');
+  console.log('4. На ширине экрана 380рх и меньше реализовано адаптивное меню +22 (Допускается появление адаптивного меня на ширине более 380, но не допускается на ширине более 770px)\n');
+  console.log('- при ширине страницы 380рх панель навигации скрывается, появляется бургер-иконка +2\n');
+  console.log('- при нажатии на бургер-иконку плавно появляется адаптивное меню +4\n');
+  console.log('- адаптивное меню соответствует цветовой схеме макета +4\n');
+  console.log('- при нажатии на крестик адаптивное меню плавно скрывается уезжая за экран +4\n');
+  console.log('- ссылки в адаптивном меню работают, обеспечивая плавную прокрутку по якорям +4\n');
+  console.log('- при клике по ссылке в адаптивном меню адаптивное меню плавно скрывается, также скрытие меню происходит если сделать клик вне данного окна +4\n');
 }());
+
+const hamburger = document.querySelector('#buttonMenu');
+const nav = document.querySelector('#nav');
+const page = document.querySelector('#page');
+const navItem = [...document.querySelectorAll('.nav__item')];
+
+  
+const toggleMenu = () => {
+  hamburger.ariaExpanded = hamburger.ariaExpanded == 'false' ? 'true' : 'false';
+  
+  nav.classList.toggle('nav--open');
+  page.classList.toggle('page--clip');
+}
+  
+hamburger.addEventListener('click', (e) => {
+  e.stopPropagation();
+
+  toggleMenu();
+});
+
+document.addEventListener('click', e => {
+  let target = e.target;
+  let isNav = target == nav || nav.contains(target);
+  let isHamburger = target == hamburger;
+  let navIsOpen = nav.classList.contains('nav--open');
+
+  if (!isNav && !isHamburger && navIsOpen) {
+    toggleMenu();
+  }
+});
+
+navItem.forEach(element => {
+  element.addEventListener('click', e => {
+    toggleMenu();
+  });
+});
+
+window.addEventListener("resize", function() {
+  if (document.documentElement.clientWidth > 710) {
+    hamburger.ariaExpanded = 'false';
+    page.classList.remove('page--clip');
+    nav.classList.remove('nav--open');
+  }
+}, false);
+
