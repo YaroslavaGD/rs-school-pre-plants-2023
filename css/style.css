@@ -583,6 +583,7 @@ body {
   font-size: 14px;
   line-height: 20px;
   color: #717171;
+  text-decoration: none;
   cursor: pointer;
 
   transition: 0.3s all;

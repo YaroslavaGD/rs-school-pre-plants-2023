@@ -1,5 +1,5 @@
 (function () {
-  console.log('Yaroslava Hryzadubova. Plants. Part2\n------------------------------------------\nScore 75/75\n');
+  console.log('Yaroslava Hryzadubova. Plants. Part3\n------------------------------------------\nScore 75/75\n');
   console.log('Оценка по пунктам:\n------------------------------------------\n');
   console.log('1. Вёрстка соответствует макету. Ширина экрана 768px +24\n');
   console.log('2. Вёрстка соответствует макету. Ширина экрана 380px +24\n');
@@ -17,6 +17,7 @@ const hamburger = document.querySelector('#buttonMenu');
 const nav = document.querySelector('#nav');
 const page = document.querySelector('#page');
 const navItem = [...document.querySelectorAll('.nav__item')];
+const details = [...document.querySelectorAll('.accordion__item')];
 
   
 const toggleMenu = () => {
@@ -57,3 +58,10 @@ window.addEventListener("resize", function() {
   }
 }, false);
 
+details.forEach(targetDetail => {
+  targetDetail.addEventListener('click', e => {
+    details.forEach(element => {
+      if (element !== targetDetail) element.removeAttribute("open");
+    });
+  });
+});
