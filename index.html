@@ -84,13 +84,13 @@
         <h2 class="service__header">Service and our projects</h2>
 
         <div class="service-controls">
-          <button class="button service-controls__item">Gardens</button>
-          <button class="button service-controls__item">Lawn</button>
-          <button class="button service-controls__item">Planting</button>
+          <button class="button service-controls__item" data-info="garden">Gardens</button>
+          <button class="button service-controls__item" data-info="lawn">Lawn</button>
+          <button class="button service-controls__item" data-info="planting">Planting</button>
         </div>
 
         <ul class="service-content">
-          <li class="service-content__item">
+          <li class="service-content__item" data-info="garden">
             <figure class="card">
               <img class="card__img" src="assets/services/1-optim-min.jpg" alt="woman tending the garden">
               <figcaption class="card__desc">
@@ -100,7 +100,7 @@
             </figure>
           </li>
 
-          <li class="service-content__item">
+          <li class="service-content__item" data-info="planting">
             <figure class="card">
               <img class="card__img" src="assets/services/2-optim-min.jpg" alt="woman tending the garden">
               <figcaption class="card__desc">
@@ -110,7 +110,7 @@
             </figure>
           </li>
 
-          <li class="service-content__item">
+          <li class="service-content__item" data-info="lawn">
             <figure class="card">
               <img class="card__img" src="assets/services/3-optim-min.jpg" alt="woman tending the garden">
               <figcaption class="card__desc">
@@ -120,7 +120,7 @@
             </figure>
           </li>
 
-          <li class="service-content__item">
+          <li class="service-content__item" data-info="planting">
             <figure class="card">
               <img class="card__img" src="assets/services/4-optim-min.jpg" alt="woman tending the garden">
               <figcaption class="card__desc">
@@ -130,7 +130,7 @@
             </figure>
           </li>
 
-          <li class="service-content__item">
+          <li class="service-content__item" data-info="garden">
             <figure class="card">
               <img class="card__img" src="assets/services/5-optim-min.jpg" alt="woman tending the garden">
               <figcaption class="card__desc">
@@ -140,7 +140,7 @@
             </figure>
           </li>
 
-          <li class="service-content__item">
+          <li class="service-content__item" data-info="planting">
             <figure class="card">
               <img class="card__img" src="assets/services/6-optim-min.jpg" alt="woman tending the garden">
               <figcaption class="card__desc">
@@ -208,6 +208,7 @@
         <form  class="contacts-form">
           <label class="contacts-form__label" for="city">City</label>
           <select class="contacts-form__select" name="city" id="city">
+            <option value="City">City</option>
             <option value="Kyiv">Kyiv</option>
             <option value="Berlin">Berlin</option>
             <option value="Madrid">Madrid</option>
