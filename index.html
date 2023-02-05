@@ -204,17 +204,28 @@
     <section class="section contacts bg-color" id="contacts">
       <div class="section__container contacts__container">
         <h2 class="contacts__header">Contact us</h2>
-
-        <form  class="contacts-form">
-          <label class="contacts-form__label" for="city">City</label>
-          <select class="contacts-form__select" name="city" id="city">
-            <option value="City">City</option>
-            <option value="Kyiv">Kyiv</option>
-            <option value="Berlin">Berlin</option>
-            <option value="Madrid">Madrid</option>
-            <option value="Amsterdam">Amsterdam</option>
-          </select>
-        </form>
+        
+        <div class="contacts-form">
+          <form  class="dropdown">
+            <button class="dropdown__input" type="button">City</button>
+            <ul class="dropdown__list ">
+              <li class="dropdown__list-item" data-value="0">Canandaigua, NY</li>
+              <li class="dropdown__list-item" data-value="1">New York City</li>
+              <li class="dropdown__list-item" data-value="2">Yonkers, NY</li>
+              <li class="dropdown__list-item" data-value="3">Sherrill, NY</li>
+            </ul>
+            <input class="dropdown__value--hidden" type="text" value="">
+          </form>
+          <address class="contacts-address">
+              <span class="contacts-address__label">City:</span> <span class="contacts-address__value dropdown__city">Canandaigua, NY</span>
+            
+              <span class="contacts-address__label">Phone:</span> <a class="contacts-address__value dropdown__phone" href="tel:+15853930001">+1	585	393 0001</a>
+            
+              <span class="contacts-address__label contacts-address__label--address">Office adress:</span> <span class="contacts-address__value dropdown__address">151 Charlotte Street</span>
+              
+              <a class="contacts-address__call dropdown__call" href="tel:+13115552368">Call us</a>
+          </address>
+        </div>
       </div>
     </section>
 

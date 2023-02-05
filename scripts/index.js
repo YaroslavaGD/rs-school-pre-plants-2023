@@ -1,17 +1,10 @@
-// (function () {
-//   console.log('Yaroslava Hryzadubova. Plants. Part3\n------------------------------------------\nScore 75/75\n');
-//   console.log('Оценка по пунктам:\n------------------------------------------\n');
-//   console.log('1. Вёрстка соответствует макету. Ширина экрана 768px +24\n');
-//   console.log('2. Вёрстка соответствует макету. Ширина экрана 380px +24\n');
-//   console.log('3. Ни на одном из разрешений до 320px включительно не появляется горизонтальная полоса прокрутки. Весь контент страницы при этом сохраняется: не обрезается и не удаляется +15\n');
-//   console.log('4. На ширине экрана 380рх и меньше реализовано адаптивное меню +22 (Допускается появление адаптивного меня на ширине более 380, но не допускается на ширине более 770px)\n');
-//   console.log('- при ширине страницы 380рх панель навигации скрывается, появляется бургер-иконка +2\n');
-//   console.log('- при нажатии на бургер-иконку плавно появляется адаптивное меню +4\n');
-//   console.log('- адаптивное меню соответствует цветовой схеме макета +4\n');
-//   console.log('- при нажатии на крестик адаптивное меню плавно скрывается уезжая за экран +4\n');
-//   console.log('- ссылки в адаптивном меню работают, обеспечивая плавную прокрутку по якорям +4\n');
-//   console.log('- при клике по ссылке в адаптивном меню адаптивное меню плавно скрывается, также скрытие меню происходит если сделать клик вне данного окна +4\n');
-// }());
+(function () {
+  console.log('Yaroslava Hryzadubova. Plants. Part3\n------------------------------------------\nScore 125/125\n');
+  console.log('Оценка по пунктам:\n------------------------------------------\n');
+  console.log('1. При нажатии на кнопки:Gardens,Lawn,Planting происходит смена фокуса на услугах в разделе service +50\n');
+  console.log('2. Accordion в секции prices реализация 3-х выпадающих списков об услугах и ценах + 50\n');
+  console.log('3. В разделе contacts реализован select с выбором городов +25\n');
+}());
 
 const hamburger = document.querySelector('#buttonMenu');
 const nav = document.querySelector('#nav');
@@ -20,6 +13,25 @@ const navItem = [...document.querySelectorAll('.nav__item')];
 const details = [...document.querySelectorAll('.accordion__item')];
 const serviceControls = [...document.querySelectorAll('.service-controls__item')];
 const serviceContent = [...document.querySelectorAll('.service-content__item')];
+const dropdown = document.querySelector('.dropdown');
+const dropdownInput = dropdown.querySelector('.dropdown__input');
+const dropdownList = [...dropdown.querySelectorAll('.dropdown__list-item')];
+const dropdownValue = document.querySelector('.dropdown__value--hidden');
+const contactAddress = document.querySelector('.contacts-address');
+const contactArr = [
+  {city: "Canandaigua, NY",
+  phone: "+1	585	393 0001",
+  address: "151 Charlotte Street"},
+  {city: "New York City",
+  phone: "+38	000	000 0000",
+  address: "123 Second Street"},
+  {city: "Yonkers, NY",
+  phone: "+38	000	000 0001",
+  address: "321 Third Street"},
+  {city: "Sherrill, NY",
+  phone: "+38	000	000 0002",
+  address: "111 Last Street"}
+];
 
   
 const toggleMenu = () => {
@@ -43,6 +55,16 @@ document.addEventListener('click', e => {
 
   if (!isNav && !isHamburger && navIsOpen) {
     toggleMenu();
+  }
+
+  if (target !== dropdownInput) {
+    dropdown.classList.remove('active');
+  }
+});
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Tab' || e.key === 'Escape') {
+    dropdown.classList.remove('active');
   }
 });
 
@@ -105,3 +127,43 @@ serviceControls.forEach(element => {
     });
   });
 });
+
+dropdownInput.addEventListener('click', e => {
+  dropdown.classList.toggle('active');
+});
+
+dropdownList.forEach(function(item) {
+  item.addEventListener('click', function(e) {
+    e.stopPropagation();
+    dropdownInput.innerText = this.innerText;
+    dropdownInput.classList.add('dropdown__input--filled');
+    dropdown.classList.remove('active');
+    dropdownValue.value = this.dataset.value;
+    fillAddress();
+
+    if (document.documentElement.clientWidth < 500) {
+      document.querySelector('.contacts__container').classList.add('contacts__container--img-disabled');
+    }
+  });
+});
+
+const city = contactAddress.querySelector('.dropdown__city');
+const phone = contactAddress.querySelector('.dropdown__phone');
+const address = contactAddress.querySelector('.dropdown__address');
+const buttonCall = contactAddress.querySelector('.dropdown__call');
+
+function fillAddress() {
+  const currentIndex = dropdownValue.value;
+  const currCity = contactArr[currentIndex].city;
+  const currPhone = contactArr[currentIndex].phone;
+  const currAddress = contactArr[currentIndex].address;
+
+  city.innerText = currCity;
+  phone.innerText = currPhone;
+  phone.setAttribute('href', 'tel:' + currPhone.split(' ').join(''))
+  
+  address.innerText = currAddress;
+  buttonCall.setAttribute('href', 'tel:' + currPhone.split(' ').join(''));
+
+  contactAddress.classList.add('active');
+}
